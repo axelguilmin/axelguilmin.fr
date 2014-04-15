@@ -1,0 +1,288 @@
+
+/* Fonts ********************/
+
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Courgette');
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../font/flaticon.eot");
+  src: url("../font/flaticon.eot#iefix") format("embedded-opentype"),
+  url("../font/flaticon.woff") format("woff"),
+  url("../font/flaticon.ttf") format("truetype"),
+  url("../font/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {   
+  font-family: Flaticon;
+  font-style: normal;
+}
+.icon-resume:before {
+  content: "\e000";
+}
+.icon-whyd:before {
+  content: "\e001";
+}
+.icon-github:before {
+  content: "\e002";
+}
+.icon-linkedin:before {
+  content: "\e003";
+}
+.icon-email:before {
+  content: "\e004";
+}
+.icon-twitter:before {
+  content: "\e005";
+}
+.icon-skype:before {
+  content: "\e006";
+}
+
+
+
+/* Global ********************/
+
+html {
+  background: #666 url('../img/gray_sand.png');
+  min-height: 100%;
+  color : #EEE;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+body {
+  max-width: 500px;
+  margin : 20px auto;
+}
+a {
+  outline-width: 0px;
+}
+
+/* Header ********************/
+
+h1, h2 {
+  margin: 10px 110px auto 30px;
+  padding: 0;
+}
+h1 {
+  z-index: -1;
+  padding-top: 30px;
+  text-align: center; 
+  color: rgba(50,50,50,0.1);
+  text-shadow: 0px 1px 1px rgba(255,255,255,.15), 0px -1px 0px rgba(0,0,0,.8);
+  font-size : 3em;
+  font-family: 'Courgette', cursive;
+  font-weight: 400;
+}
+h2 {
+  margin-top: -22px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.652em;
+  color: #ffd700;
+  text-shadow: 0px -1px 1px rgba(255,255,255,.15), 0px 1px 0px rgba(0,0,0,.8);
+}
+header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  min-height: 150px;
+  background: url('../img/axel.png') bottom -2px right 19px no-repeat;
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  background-size: 90px;
+}
+header:hover h2 {
+  padding-left: 50px;
+  transition : 1s;
+}
+header h2 {
+  transition : 0.1s;
+  transition-timing-function: ease-out;
+}
+
+/* Nav ********************/
+
+nav > a,
+nav > a:active {
+  color: inherit;
+  text-decoration: none;
+}
+nav {
+  margin-top: 20px;
+  width: 180px;
+  float : left;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  margin: 0;
+  padding: 0; 
+} 
+[class^="btn-"] {
+  margin: 0 0 7px 0;
+  float: left;
+  white-space: nowrap;
+}
+[class^="btn-"] > span,
+[class^="btn-"] > i {
+  padding: 3px 10px;
+  display: inline-block;
+  transition: 0.35s all;
+}
+[class^="btn-"] > span {
+  min-width: 100px;
+  white-space: nowrap;
+  color: #222;
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(200,200,200,0.5);
+
+}
+[class^="btn-"]:hover > span,
+[class^="btn-"]:focus > span {
+  background: #95a5a6;
+}
+[class^="btn-"]:hover > i,
+[class^="btn-"]:focus > i {
+  color: #ffd700; 
+}
+[class^="btn-"] > i {
+  border-radius: 5px 0 0 5px;
+  position: relative;
+  font-style: normal;
+  color: #FFF;
+  background: #222;
+  min-width: 30px;
+  text-align: center;
+}
+[class^="btn-"] > i:after { /*This is to create the arrow beside the icon*/
+  content: "";
+  border: 9px solid;
+  border-color: transparent transparent transparent #222;
+  position: absolute;
+  top: 5px;
+  right: -16px;
+}
+.btn-email:hover > i,
+.btn-email:focus > i {
+  color: #FFD700;
+} 
+.btn-github:hover > i,
+.btn-github:focus > i { 
+  color: #82DD65; 
+}
+.btn-linkedin:hover > i,
+.btn-linkedin:focus > i {
+  color: #0274B3; 
+}
+.btn-twitter:hover > i,
+.btn-twitter:focus > i { 
+  color: #00ACED; 
+}
+.btn-skype:hover > i,
+.btn-skype:focus > i { 
+  color: #00AFF0; 
+}
+.btn-whyd:hover > i,
+.btn-whyd:focus > i {
+  color : #FF6961
+}
+.btn-resume:hover > i,
+.btn-resume:focus > i {
+  color : #BB0706
+}
+
+/* Article ********************/
+
+article {
+	width: 310px;
+	float : right;
+	text-align: justify;
+  margin-top: 20px;
+  text-shadow: #000 0px 0px 5px, #000 0px 0px 5px;
+}
+article > p:nth-of-type(1) {
+	margin-top: 0;
+}
+article a {
+  color: #CCF;
+  text-decoration: none;
+}
+article a:hover {
+  text-decoration: underline;
+}
+/* > Ghost ********************/
+
+@media screen and (min-width: 500px) {
+  div#axel::before {
+    content: "Axel";
+    opacity: .05;
+  	z-index: -1 ;
+    position: fixed;
+    top: 140px;
+    right: -170px;
+    transform : rotate(-90deg);
+    color: #000;
+    font-size : 300px;
+    font-family: 'Courgette', cursive;
+   	cursor: default;
+    transition : 4.0s;
+    transition-property : opacity;
+    /* rotation don't work on chorme Nexus5 */
+   }
+   div#axel:hover::before {
+   	transition: .4s;
+   	opacity: 0.0;
+   }
+}
+
+/* Mobile version ********************/
+
+@media screen and (max-width: 500px) {
+  body {
+    margin : 0 auto;
+  }
+  header {
+    min-height: 0px;
+    padding-top: 0;
+    background : none;
+    margin-top: 0;
+    border-bottom: none;
+  }
+  h1, h2 {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  h1 {
+    padding-top: 0;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  nav {
+    display: block;
+    float: none;
+    width: 300px;
+    margin: 0 auto ;
+    padding: 0;
+  }
+  [class^="btn-"] > span {
+    width: 230px;
+  }
+  article {
+    clear: both;
+    width: 96%;
+    margin: 20px 2%;
+  }
+  .btn-email > i { color: #FFD700; }
+  .btn-github > i { color: #82DD65; }
+  .btn-linkedin > i { color: #0274B3; }
+  .btn-twitter > i { color: #00ACED; }
+  .btn-skype > i { color: #00AFF0; }
+  .btn-whyd > i { color: #FF6961; }
+  .btn-resume > i { color: #BB0706; }
+
+}
+

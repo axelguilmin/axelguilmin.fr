@@ -1,0 +1,41 @@
+RewriteEngine On
+
+# Favicon
+RewriteRule apple-touch-icon-114x114.png favicon/apple-touch-icon-114x114.png
+RewriteRule apple-touch-icon-120x120.png favicon/apple-touch-icon-120x120.png 
+RewriteRule apple-touch-icon-144x144.png favicon/apple-touch-icon-144x144.png
+RewriteRule apple-touch-icon-152x152.png favicon/apple-touch-icon-152x152.png
+RewriteRule apple-touch-icon-57x57.png favicon/apple-touch-icon-57x57.png
+RewriteRule apple-touch-icon-60x60.png favicon/apple-touch-icon-60x60.png
+RewriteRule apple-touch-icon-72x72.png favicon/apple-touch-icon-72x72.png
+RewriteRule apple-touch-icon-76x76.png favicon/apple-touch-icon-76x76.png
+RewriteRule apple-touch-icon-precomposed.png favicon/apple-touch-icon-precomposed.png
+RewriteRule apple-touch-icon.png favicon/apple-touch-icon.png
+RewriteRule browserconfig.xml favicon/browserconfig.xml
+RewriteRule favicon-160x160.png favicon/favicon-160x160.png
+RewriteRule favicon-16x16.png favicon/favicon-16x16.png
+RewriteRule favicon-196x196.png favicon/favicon-196x196.png 
+RewriteRule favicon-32x32.png favicon/favicon-32x32.png
+RewriteRule favicon-96x96.png favicon/favicon-96x96.png
+RewriteRule favicon.ico favicon/favicon.ico
+RewriteRule mstile-144x144.png favicon/mstile-144x144.png
+RewriteRule mstile-150x150.png favicon/mstile-150x150.png
+RewriteRule mstile-310x150.png favicon/mstile-310x150.png
+RewriteRule mstile-310x310.png favicon/mstile-310x310.png
+RewriteRule mstile-70x70.png favicon/mstile-70x70.png
+
+# Force www
+#RewriteCond %{HTTP_HOST} !^www.axelguilmin.fr$
+#RewriteRule ^(.*) http://www.axelguilmin.fr/$1 [QSA,L,R=301]
+
+# index.html -> /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html
+RewriteRule ^index\.html$ http://www.axelguilmin.fr [QSA,L,R=301]
+
+# Resume
+RewriteRule ^CV_Axel_Guilmin.pdf$ ./data/CV_Axel_Guilmin.pdf [NC,L]
+
+# 404 Error
+ErrorDocument 404 http://www.axelguilmin.fr/
+
+Options -Indexes
