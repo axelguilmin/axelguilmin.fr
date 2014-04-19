@@ -1,8 +1,6 @@
 
 /* Fonts ********************/
 
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Courgette');
-
 @font-face {
   font-family: "Flaticon";
   src: url("../font/flaticon.eot");
@@ -78,7 +76,6 @@ h1 {
 h2 {
   margin-top: -22px;
   text-align: center;
-  font-weight: 400;
   font-size: 1.652em;
   color: #ffd700;
   text-shadow: 0px -1px 1px rgba(255,255,255,.15), 0px 1px 0px rgba(0,0,0,.8);
