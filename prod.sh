@@ -42,7 +42,7 @@ cd ..
 
 # See HTML Compressor https://code.google.com/p/htmlcompressor
 echo ' -------- Running HTML Compressor -------- '
-for HTML_FILE in $(ls | grep .html)
+for HTML_FILE in $(ls | grep -i -E '.html|.xml')
 do
   java -jar ../tools/htmlcompressor-1.5.3.jar ${HTML_FILE} > ${HTML_FILE}.tmp && mv ${HTML_FILE}.tmp ${HTML_FILE}
   echo ${HTML_FILE} compressed
