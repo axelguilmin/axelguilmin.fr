@@ -67,11 +67,15 @@ h1 {
   z-index: -1;
   padding-top: 30px;
   text-align: center; 
-  color: rgba(50,50,50,0.1);
-  text-shadow: 0px 1px 1px rgba(255,255,255,.15), 0px -1px 0px rgba(0,0,0,.8);
   font-size : 3em;
   font-family: 'Courgette', cursive;
   font-weight: 400;
+}
+.textshadow h1 {
+  color: rgba(50,50,50,0.1);
+  text-shadow: 0px 1px 1px rgba(255,255,255,.15), 0px -1px 0px rgba(0,0,0,.8);
+  /* IE 10 need spread value */
+  text-shadow: 0px 1px 1px 1px rgba(255,255,255,.15), 0px -1px 0px 1px rgba(0,0,0,.8); 
 }
 h2 {
   margin-top: -22px;
@@ -213,7 +217,7 @@ article a:hover {
 /* > Ghost ********************/
 
 @media screen and (min-width: 500px) {
-  div#axel::before {
+  .csstransforms.opacity div#axel::before {
     content: "Axel";
     opacity: .05;
   	z-index: -1 ;
@@ -228,11 +232,11 @@ article a:hover {
     transition : 4.0s;
     transition-property : opacity;
     /* rotation don't work on chorme Nexus5 */
-   }
-   div#axel:hover::before {
+  }
+  .csstransforms.opacity div#axel:hover::before {
    	transition: .4s;
    	opacity: 0.0;
-   }
+  }
 }
 
 /* Mobile version ********************/
@@ -273,13 +277,26 @@ article a:hover {
     width: 96%;
     margin: 20px 2%;
   }
-  .btn-email > i { color: #FFD700; }
-  .btn-github > i { color: #82DD65; }
-  .btn-linkedin > i { color: #0274B3; }
-  .btn-twitter > i { color: #00ACED; }
-  .btn-skype > i { color: #00AFF0; }
-  .btn-whyd > i { color: #FF6961; }
-  .btn-resume > i { color: #BB0706; }
-
+  .btn-email > i {
+    color: #FFD700;
+  }
+  .btn-github > i {
+    color: #82DD65;
+  }
+  .btn-linkedin > i {
+    color: #0274B3;
+  }
+  .btn-twitter > i {
+    color: #00ACED;
+  }
+  .btn-skype > i {
+    color: #00AFF0;
+  }
+  .btn-whyd > i {
+    color: #FF6961;
+  }
+  .btn-resume > i {
+    color: #BB0706;
+  }
 }
 

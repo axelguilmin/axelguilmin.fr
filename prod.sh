@@ -39,6 +39,9 @@ echo ' -------- Running YUI Compressor on css files -------- '
 cd ./css
 java -jar ../../tools/yuicompressor-2.4.8.jar --type css -v -o '.css$:.css' *.css
 cd ..
+cd ./js
+java -jar ../../tools/yuicompressor-2.4.8.jar --type js -v -o '.js$:.js' *.js
+cd ..
 
 # See HTML Compressor https://code.google.com/p/htmlcompressor
 echo ' -------- Running HTML Compressor -------- '
